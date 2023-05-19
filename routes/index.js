@@ -13,6 +13,7 @@ const supplier = require('../controllers/supplier');
 const component = require('../controllers/component');
 const product = require('../controllers/product');
 const componentSupplier = require('../controllers/componentSupplier');
+const productComponent = require('../controllers/productComponent');
 
 router.get('/suppliers', supplier.index); // get all supplier
 router.post('/suppliers', supplier.store); // create new supplier
@@ -34,5 +35,8 @@ router.delete('/products/:id', product.destroy); // delete product
 
 router.post('/ComponentSuppliers', componentSupplier.store); // add relation component and supplier
 router.delete('/ComponentSuppliers', componentSupplier.destroy); // remove relation component and supplier
+
+router.post('/productComponents', productComponent.store); // add relation product and component
+router.delete('/productComponents', productComponent.destroy); // remove relation product and component
 
 module.exports = router;

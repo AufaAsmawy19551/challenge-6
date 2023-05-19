@@ -10,9 +10,9 @@ info:
 servers:
   - url: http://localhost:3000
     description: Local
-  - url: https://test.factory.com/v1.0.0
-    description: Staging
-  - url: https://factory.com/v1.0.0
+  - url: https://api-factory-service-development.up.railway.app
+    description: Development
+  - url: https://api-factory-service-production.up.railway.app
     description: Production
 
 tags: 
