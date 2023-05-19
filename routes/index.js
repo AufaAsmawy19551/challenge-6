@@ -11,6 +11,7 @@ router.get('/', (req, res) => res.status(200).json({ message: 'Welcome to Factor
 
 const supplier = require('../controllers/supplier');
 const component = require('../controllers/component');
+const product = require('../controllers/product');
 
 router.get('/suppliers', supplier.index); // get all supplier
 router.post('/suppliers', supplier.store); // create new supplier
@@ -23,5 +24,11 @@ router.post('/components', component.store); // create new cumponent
 router.get('/components/:id', component.show); // get detail cumponent
 router.put('/components/:id', component.update); // update cumponent
 router.delete('/components/:id', component.destroy); // delete cumponent
+
+router.get('/products', product.index); // get all product
+router.post('/products', product.store); // create new product
+router.get('/products/:id', product.show); // get detail product
+router.put('/products/:id', product.update); // update product
+router.delete('/products/:id', product.destroy); // delete product
 
 module.exports = router;
